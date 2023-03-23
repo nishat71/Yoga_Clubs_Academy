@@ -38,7 +38,7 @@ const Home = () => {
                 <AllYogis yogis={yogis} handleToCart={handleToCart}></AllYogis>
             </div>
             <div className='cart-container'>
-                <Cart cart={cart}></Cart>
+                {/* <Cart cart={cart}></Cart> */}
             </div>
         </div>
     );
