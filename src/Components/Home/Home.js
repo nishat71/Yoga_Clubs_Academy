@@ -33,7 +33,7 @@ const Home = () => {
     return (
         <div className='home-container'>
             <div className='yogis-content'>
-                <h3 className='logo'><TbYoga className='logo-icon' />Yoga Club Academy</h3>
+                <h3 className='logo'><TbYoga className='logo-icon' />Yoga Clubs Academy</h3>
                 <h4 className='title'>Select today's exercise from your favourite Yoga Club Academy</h4>
                 <AllYogis yogis={yogis} handleToCart={handleToCart}></AllYogis>
             </div>
