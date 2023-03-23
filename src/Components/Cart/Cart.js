@@ -20,13 +20,13 @@ const Cart = (props) => {
     }
 
 
-    // const handleBreak = (e) => {
-    //     const time = e.currentTarget.textContent;
-    //     console.log(time);
-    //     setBreakTime(time);
-    //     // addToDb(e);
-    //   localStorage.setItem('Breaktime',time)
-    // };
+    const handleBreak = (e) => {
+        const time = e.currentTarget.textContent;
+        console.log(time);
+        setBreakTime(time);
+        // addToDb(e);
+      localStorage.setItem('Breaktime',time)
+    };
 
 
 
@@ -87,10 +87,10 @@ const Cart = (props) => {
             <div className='user-break'>
                 <h3 className='cart-details-title'>Add A Break</h3>
                 <div className='user-time'>
-                    {/* <button onClick={handleBreak} className='time'>10</button>
+                    <button onClick={handleBreak} className='time'>10</button>
                     <button onClick={handleBreak} className='time'>20</button>
                     <button onClick={handleBreak} className='time'>30</button>
-                    <button onClick={handleBreak} className='time'>40</button> */}
+                    <button onClick={handleBreak} className='time'>40</button>
                 </div>
             </div>
 

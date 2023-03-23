@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Home></Home>
-      {/* <FAQS></FAQS> */}
+      <FAQS></FAQS>
     </div>
   );
 }
