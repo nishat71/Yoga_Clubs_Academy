@@ -1,0 +1,13 @@
+.faq {
+    margin: 1rem;
+    /* background-color: #ddd; */
+    background-color: #efecec;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    box-shadow: 0.1rem .1rem #2c2c2c;
+}
+
+.faq div {
+    display: flex;
+    justify-content: space-between;
+}
