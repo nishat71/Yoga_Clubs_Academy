@@ -1,5 +1,5 @@
 import React from 'react'
-// import './SingleYogi.css'
+import './SingleYogi.css'
 
 
 const SingleYogi = ({ yogi, handleToCart }) => {
