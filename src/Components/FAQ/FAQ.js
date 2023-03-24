@@ -11,8 +11,6 @@ const FAQ = ({ id, title, desc }) => {
                 <button onClick={()=>{setToggle(!toggle)}}>
                     {toggle ? "-" : "+"}
                 </button> 
-                {/* button er upor jkn click krbo state chnage er jnno onClick method use krte hobe,
-                 setToggle er maddome prottekbar toggle er value change krbo (toggle true takle false hobe, false takle true) */}
             </div>
             {toggle && (
                 <p>{desc}</p>

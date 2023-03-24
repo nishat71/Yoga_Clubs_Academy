@@ -7,6 +7,7 @@ import FAQ from './FAQ';
 const FAQS = () => {
     console.log(faqsData);
     const [faqs, setFaqs] = useState(faqsData);
+    
     return (
         <main className='container'>
             <section className='faqs'>

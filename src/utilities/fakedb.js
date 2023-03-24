@@ -10,12 +10,12 @@ const addToDb = (id) => {
 
 
 const getStoredCart = () => {
-  // let yogaCart = {};
-  // const storedCart = localStorage.getItem("yoga-cart");
-  // if (storedCart) {
-  //   yogaCart = JSON.parse(storedCart);
-  // }
-  // return yogaCart;
+  let yogaCart = {};
+  const storedCart = localStorage.getItem("yoga-cart");
+  if (storedCart) {
+    yogaCart = JSON.parse(storedCart);
+  }
+  return yogaCart;
 };
 
 export { addToDb, getStoredCart };

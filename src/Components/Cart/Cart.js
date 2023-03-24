@@ -3,13 +3,10 @@ import './Cart.css'
 import { HiLocationMarker } from 'react-icons/hi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { addToDb, getStoredCart } from '../../utilities/fakedb';
 
 
 const Cart = (props) => {
     const [breakTime, setBreakTime] = useState(0);
-
-
     const { cart } = props;
     // console.log(cart);
 
@@ -21,33 +18,35 @@ const Cart = (props) => {
 
 
     const handleBreak = (e) => {
-        const time = e.currentTarget.textContent;
-        console.log(time);
-        setBreakTime(time);
-        // addToDb(e);
-      localStorage.setItem('Breaktime',time)
+        const breakTime = e.currentTarget.textContent;
+        console.log(breakTime);
+        addProductToDb(breakTime);
     };
 
-
-
+    // useEffect(() => {
+    //     localStorage.setItem('BreakTime', JSON.stringify(breakTime));
+    // },[breakTime]);
 
     const getStoredCart = () => {
-        const storedCart = localStorage.getItem('Breaktime');
-        let cart = {};
-        if (storedCart) {
-            cart = JSON.parse(storedCart);
-        }
-        return cart;
+        const breakTime = localStorage.getItem('BreakTime');
+        // const storedCart = localStorage.getItem('BreakTime');
+        // if(storedCart === {}){
+        //     return {};
+        // }
+        // else{
+        //     return setBreakTime(JSON.parse(storedCart));
+        // }
+        console.log(breakTime);
+        setBreakTime(JSON.parse(breakTime));
     }
-    
+
+    const addProductToDb = (breakTime) => {
+        // const Time = getStoredCart();
+        localStorage.setItem('BreakTime', JSON.stringify(breakTime))
+        const Time = getStoredCart();
+    }
 
 
-    const addProductToDb = (product) => {
-        const cart = getStoredCart();
-        // cart[product] = quantity;
-        localStorage.setItem('Breaktime', JSON.stringify(cart));
-    }
-    
 
 
 
@@ -55,6 +54,9 @@ const Cart = (props) => {
         alert('clicked');
         toast("Your Activity is completed");
     };
+
+
+
 
     return (
         <div className='cart'>
@@ -68,7 +70,6 @@ const Cart = (props) => {
                     <p className='user-info_para'>Student, Department of CSE</p>
                 </div>
             </div>
-
             <div className='user-desc'>
                 <div>
                     <h4 className='user-desc-title'>75kg</h4>
@@ -83,7 +84,6 @@ const Cart = (props) => {
                     <p className='user-desc-p'>Age</p>
                 </div>
             </div>
-
             <div className='user-break'>
                 <h3 className='cart-details-title'>Add A Break</h3>
                 <div className='user-time'>
@@ -93,7 +93,6 @@ const Cart = (props) => {
                     <button onClick={handleBreak} className='time'>40</button>
                 </div>
             </div>
-
             <div className='exercise-details'>
                 <h3 className='cart-details-title'>Exercise Details</h3>
                 <div className='exercise-field'>
@@ -105,8 +104,6 @@ const Cart = (props) => {
                     <p className='cart-time'>{breakTime} seconds</p>
                 </div>
             </div>
-
-
             <button onClick={notify} className='btn activity-btn'>Activity Completed</button>
         </div>
     );
