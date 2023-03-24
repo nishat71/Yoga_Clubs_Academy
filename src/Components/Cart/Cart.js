@@ -3,6 +3,7 @@ import './Cart.css'
 import { HiLocationMarker } from 'react-icons/hi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
 
 
 const Cart = (props) => {
@@ -51,8 +52,14 @@ const Cart = (props) => {
 
 
     const notify = () => {
-        alert('clicked');
-        toast("Your Activity is completed");
+        // alert('clicked');
+        // toast("Your Activity is completed");
+
+        Swal.fire(
+            'Good job!',
+            'Your Activity is successfully completed!',
+            'success'
+          )
     };
 
 
