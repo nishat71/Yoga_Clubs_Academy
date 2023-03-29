@@ -3,9 +3,6 @@ import './Home.css';
 import { TbYoga } from 'react-icons/tb'
 import Cart from '../Cart/Cart';
 import AllYogis from '../AllYogis/AllYogis';
-import { getStoredCart } from '../../utilities/fakedb';
-import FAQ from '../FAQ/FAQ';
-
 
 
 
@@ -14,18 +11,15 @@ const Home = () => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        // fetch(`https://restcountries.com/v3.1/all`)
         fetch('data.json')
             .then(res => res.json())
             .then(data => setYogis(data));
     }, []);
-    // console.log(yogis);
+
 
 
 
     const handleToCart = (yogis) => {
-        // console.log(yogis);
-        // setCart(yogis);
         const newArray = [...cart, yogis];
         setCart(newArray);
     }

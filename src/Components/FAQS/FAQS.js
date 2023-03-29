@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import './FAQS.css'
-// import { faqsData } from './data'
 import { faqsData } from '../FAQ/data';
-// import FAQ from './FAQ';
 import FAQ from '../FAQ/FAQ';
 
 

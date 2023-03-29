@@ -31,10 +31,9 @@
     margin: auto;
 }
 
-
+/* responsive */
 @media screen and (max-width:768px){
     .home-container {
-        /* grid-template-columns: 2fr 1fr; */
         grid-template-columns: auto auto;
     }
     .logo {

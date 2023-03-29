@@ -9,7 +9,6 @@ import Swal from 'sweetalert2';
 const Cart = (props) => {
     const [breakTime, setBreakTime] = useState(0);
     const { cart } = props;
-    // console.log(cart);
 
 
     let time = 0;
@@ -25,15 +24,7 @@ const Cart = (props) => {
     };
 
 
-
-    // useEffect(() => {
-    //     localStorage.setItem('BreakTime', JSON.stringify(breakTime));
-    // },[breakTime]);
-
-
-
     const getStoredCart = () => {
-        // const breakTime = localStorage.getItem('BreakTime');
         const storedCart = localStorage.getItem('BreakTime');
         if(storedCart === {}){
             return {};
@@ -41,12 +32,9 @@ const Cart = (props) => {
         else{
             return setBreakTime(JSON.parse(storedCart));
         }
-        // console.log(breakTime);
-        // setBreakTime(JSON.parse(breakTime));
     }
 
     const addProductToDb = (breakTime) => {
-        // const Time = getStoredCart();
         localStorage.setItem('BreakTime', JSON.stringify(breakTime))
         const Time = getStoredCart();
     }

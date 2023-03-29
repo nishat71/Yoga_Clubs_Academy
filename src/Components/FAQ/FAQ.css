@@ -1,6 +1,5 @@
 .faq {
     margin: 1rem;
-    /* background-color: #ddd; */
     background-color: #efecec;
     padding: 1rem;
     border-radius: 0.6rem;
@@ -20,15 +19,12 @@
 }
 
 
-
-@media screen and (max-width:992) {}
-
+/* responsive */
 @media screen and (max-width:768px) {
     .faq-desc {
         font-size: 16px;
     }
 }
-
 
 @media screen and (max-width:575px) {
     .faq-title {

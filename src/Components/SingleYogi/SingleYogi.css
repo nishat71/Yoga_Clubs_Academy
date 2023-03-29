@@ -54,6 +54,8 @@
     font-size: 17px;
 }
 
+
+/* responsive */
 @media screen and (max-width:768px){
     .single-yogi-card-details {
         margin-top: 15px;
