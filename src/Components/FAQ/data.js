@@ -2,7 +2,7 @@ export const faqsData = [
     {
         id: 1,
         title: "1. How does react work?",
-        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias fugiat ipsum doloremque animi non amet eius a corporis cupiditate, tempore error earum rem placeat architecto neque maxime sequi voluptatibus ducimus.",
+        desc: "React works through creating virtual DOM from real DOM.  Ex: When an element in the real DOM is changed, the DOM will re-render the element and all of its children. When it comes to building complex web applications with a lot of interactivity and state changes, this approach is slow and inefficient. By Virtual DOM we can specify what state we want the UI to be in, after which React makes it happen.After the virtual DOM is updated, React compares it to a snapshot of the virtual DOM taken just before the update, determines what element was changed, and then updates only that element on the real DOM. ",
     },
     {
         id: 2,

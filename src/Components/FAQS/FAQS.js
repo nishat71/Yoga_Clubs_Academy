@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import './FAQS.css'
-import { faqsData } from './data'
-import FAQ from './FAQ';
+// import { faqsData } from './data'
+import { faqsData } from '../FAQ/data';
+// import FAQ from './FAQ';
+import FAQ from '../FAQ/FAQ';
 
 
 const FAQS = () => {
@@ -11,7 +13,7 @@ const FAQS = () => {
     return (
         <main className='container'>
             <section className='faqs'>
-                <h1>FAQs</h1>
+                <h1 className='faqs-heading'>FAQs</h1>
                 {
                     faqs.map((faq) => <FAQ key={faq.id} {...faq}></FAQ>)
                 }

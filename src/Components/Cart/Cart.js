@@ -24,21 +24,25 @@ const Cart = (props) => {
         addProductToDb(breakTime);
     };
 
+
+
     // useEffect(() => {
     //     localStorage.setItem('BreakTime', JSON.stringify(breakTime));
     // },[breakTime]);
 
+
+
     const getStoredCart = () => {
-        const breakTime = localStorage.getItem('BreakTime');
-        // const storedCart = localStorage.getItem('BreakTime');
-        // if(storedCart === {}){
-        //     return {};
-        // }
-        // else{
-        //     return setBreakTime(JSON.parse(storedCart));
-        // }
-        console.log(breakTime);
-        setBreakTime(JSON.parse(breakTime));
+        // const breakTime = localStorage.getItem('BreakTime');
+        const storedCart = localStorage.getItem('BreakTime');
+        if(storedCart === {}){
+            return {};
+        }
+        else{
+            return setBreakTime(JSON.parse(storedCart));
+        }
+        // console.log(breakTime);
+        // setBreakTime(JSON.parse(breakTime));
     }
 
     const addProductToDb = (breakTime) => {
@@ -59,7 +63,7 @@ const Cart = (props) => {
             'Good job!',
             'Your Activity is successfully completed!',
             'success'
-          )
+        )
     };
 
 

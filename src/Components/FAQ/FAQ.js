@@ -7,16 +7,16 @@ const FAQ = ({ id, title, desc }) => {
     return (
         <article className='faq'>
             <div>
-                <h4>{title}</h4>
+                <h4 className='faq-title'>{title}</h4>
                 <button onClick={()=>{setToggle(!toggle)}}>
                     {toggle ? "-" : "+"}
                 </button> 
             </div>
             {toggle && (
-                <p>{desc}</p>
+                <p className='faq-desc'>{desc}</p>
             )}
         </article>
     )
 }
 
-export default FAQ
+export default FAQ;
